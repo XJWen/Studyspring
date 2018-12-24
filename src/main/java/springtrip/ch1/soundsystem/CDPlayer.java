@@ -1,6 +1,7 @@
 package springtrip.ch1.soundsystem;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /**
@@ -8,14 +9,14 @@ import org.springframework.stereotype.Component;
  * **/
 @Component
 public class CDPlayer   implements CompacDisc {
-    private CompacDisc cd;
+    private CompacDisc compacDisc;
 
     /**
      * Autowired注入构造函数
      * **/
     @Autowired
-    public CDPlayer(CompacDisc cd){
-        this.cd = cd;
+    public CDPlayer(CompacDisc compacDisc){
+        this.compacDisc = compacDisc;
     }
 
     @Override
@@ -26,7 +27,8 @@ public class CDPlayer   implements CompacDisc {
     /**
      * Autowired注入setter方法中
      * **/
-    public void setCd(CompacDisc cd) {
-        this.cd = cd;
+    @Autowired
+    public void setCompacDisc(CompacDisc cd) {
+        this.compacDisc = cd;
     }
 }

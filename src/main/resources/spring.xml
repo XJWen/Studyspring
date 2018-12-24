@@ -1,19 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
             http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/util
+            http://www.springframework.org/schema/util/spring-util.xsd
             http://www.springwork.org/schema/context">
 
-    <bean   id="sgtPaggers" class="springtrip.ch1.soundsystem.SgtPaggers"></bean>
+    <util:list id="trackList">
+        <value>Sgt. Pepper's Lonely Hearts Club Band</value>
+        <value>With a Little Help form My friends</value>
+        <value>Lucy in the Sky with Diamods</value>
+        <value>Getting Better</value>
+    </util:list>
+
+    <bean id="sgtPaggers" class="springtrip.ch1.soundsystem.SgtPaggers"></bean>
     <!--
     c命名空间的使用,-ref是指构造方法的参数，_0指的是该bean的第一个属性
     -->
     <!--<bean   id="cdPlayer" class="springtrip.ch1.soundsystem.CDPlayer" c:cd-ref="sgtPaggers"></bean>-->
-    <bean   id="cdPlayer" class="springtrip.ch1.soundsystem.CDPlayer" c:cd-ref="sgtPaggers" c:_0-ref="sgtPaggers" c:_0="sgtPaggers"></bean>
+    <bean id="cdPlayer" class="springtrip.ch1.soundsystem.CDPlayer"
+          c:compacDisc-ref="sgtPaggers" c:_0-ref="sgtPaggers" c:_0="sgtPaggers"
+            p:compacDisc-ref="sgtPaggers">
+        <!--<property name="compacDisc" ref="sgtPaggers"/>-->
+    </bean>
 
-    <bean id="blankDisc" class="springtrip.ch1.soundsystem.BlankDisc" c:title="Sgt. Pegger's Lonely Hearts Club Band" c:artist="the Beatles"
-        >
+    <bean id="blankDisc" class="springtrip.ch1.soundsystem.BlankDisc"
+          c:title="Sgt. Pegger's Lonely Hearts Club Band" c:artist="the Beatles"
+            p:title="Sgt. Pegger's Lonely Hearts Club band" p:artist="the beatles" p:tracks-ref="trackList">
+        <constructor-arg name="tracks">
+            <list>
+                <value>Sgt. Pepper's Lonely Hearts Club Band</value>
+                <value>With a Little Help form My friends</value>
+                <value>Lucy in the Sky with Diamods</value>
+                <value>Getting Better</value>
+            </list>
+        </constructor-arg>
     </bean>
 </beans>
