@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:c="http://www.springframework.org/schema/c"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
             http://www.springframework.org/schema/beans/spring-beans.xsd
             http://www.springwork.org/schema/context">
 
-    <bean class="springtrip.ch1.soundsystem.SgtPaggers"></bean>
+    <bean   id="sgtPaggers" class="springtrip.ch1.soundsystem.SgtPaggers"></bean>
+    <!--
+    c命名空间的使用,-ref是指构造方法的参数，_0指的是该bean的第一个属性
+    -->
+    <!--<bean   id="cdPlayer" class="springtrip.ch1.soundsystem.CDPlayer" c:cd-ref="sgtPaggers"></bean>-->
+    <bean   id="cdPlayer" class="springtrip.ch1.soundsystem.CDPlayer" c:cd-ref="sgtPaggers" c:_0-ref="sgtPaggers" c:_0="sgtPaggers"></bean>
+
+    <bean id="blankDisc" class="springtrip.ch1.soundsystem.BlankDisc" c:title="Sgt. Pegger's Lonely Hearts Club Band" c:artist="the Beatles"
+        >
+    </bean>
 </beans>

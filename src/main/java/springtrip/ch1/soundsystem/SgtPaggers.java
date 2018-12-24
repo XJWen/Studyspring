@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 /**
- * 标准组件类
+ * 标准组件类,Sgt. Pegger的唱片
  * **/
 @Component
 public class SgtPaggers implements CompacDisc{

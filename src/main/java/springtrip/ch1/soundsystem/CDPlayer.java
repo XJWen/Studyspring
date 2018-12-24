@@ -1,9 +1,11 @@
 package springtrip.ch1.soundsystem;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
+/**
+ *  CD播放机
+ * **/
 @Component
 public class CDPlayer   implements CompacDisc {
     private CompacDisc cd;
