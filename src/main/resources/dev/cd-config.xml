@@ -10,6 +10,8 @@
             http://www.springframework.org/schema/util/spring-util.xsd
             http://www.springwork.org/schema/context">
 
+
+
     <util:list id="trackList">
         <value>Sgt. Pepper's Lonely Hearts Club Band</value>
         <value>With a Little Help form My friends</value>
@@ -21,13 +23,6 @@
     <!--
     c命名空间的使用,-ref是指构造方法的参数，_0指的是该bean的第一个属性
     -->
-    <!--<bean   id="cdPlayer" class="springtrip.ch1.soundsystem.CDPlayer" c:cd-ref="sgtPaggers"></bean>-->
-    <bean id="cdPlayer" class="springtrip.ch1.soundsystem.CDPlayer"
-          c:compacDisc-ref="sgtPaggers" c:_0-ref="sgtPaggers" c:_0="sgtPaggers"
-            p:compacDisc-ref="sgtPaggers">
-        <!--<property name="compacDisc" ref="sgtPaggers"/>-->
-    </bean>
-
     <bean id="blankDisc" class="springtrip.ch1.soundsystem.BlankDisc"
           c:title="Sgt. Pegger's Lonely Hearts Club Band" c:artist="the Beatles"
             p:title="Sgt. Pegger's Lonely Hearts Club band" p:artist="the beatles" p:tracks-ref="trackList">

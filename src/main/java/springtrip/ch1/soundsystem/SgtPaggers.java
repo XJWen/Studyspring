@@ -24,6 +24,7 @@ public class SgtPaggers implements CompacDisc{
     }
 
     /**
+     * javaConfig注入
      * 通过传入，Bean注入sgetPeppers()，不会重复调用sgetPeppers()
      * **/
     @Bean

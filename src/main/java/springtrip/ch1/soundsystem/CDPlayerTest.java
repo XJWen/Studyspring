@@ -18,4 +18,6 @@ public class CDPlayerTest {
     public void cdShouldNotBeNull(){
         Assert.assertNotNull(CD);
     }
+
+
 }

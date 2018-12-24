@@ -59,6 +59,15 @@
             <artifactId>spring-data-redis</artifactId>
             <version>1.8.16.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>4.3.20.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openanzo.dependencies</groupId>
+            <artifactId>org.apache.commons.dbcp</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

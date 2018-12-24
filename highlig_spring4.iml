@@ -3,8 +3,11 @@
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
       <configuration>
-        <fileset id="fileset" name="Spring" removed="false">
+        <fileset id="fileset" name="Spring" removed="false" profiles="dev">
           <file>file://$MODULE_DIR$/src/main/resources/spring.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/cdplayer-config.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/soundsystem-config.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/jdbc-config.xml</file>
         </fileset>
       </configuration>
     </facet>
