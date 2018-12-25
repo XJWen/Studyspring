@@ -19,6 +19,11 @@ public class BlankDisc implements CompacDisc{
         this.tracks = tracks;
     }
 
+    public BlankDisc(String title, String artist) {
+        this.title = title;
+        this.artist = artist;
+    }
+
     @Override
     public void play() {
         System.out.println("playing"+title+" by"+artist);

@@ -13,9 +13,10 @@ public class CDPlayer   implements CompacDisc {
 
     /**
      * Autowired注入构造函数
+     * Qualifer 限定符
      * **/
     @Autowired
-    public CDPlayer(CompacDisc compacDisc){
+    public CDPlayer(@Qualifier CompacDisc compacDisc){
         this.compacDisc = compacDisc;
     }
 
@@ -28,7 +29,7 @@ public class CDPlayer   implements CompacDisc {
      * Autowired注入setter方法中
      * **/
     @Autowired
-    public void setCompacDisc(CompacDisc cd) {
+    public void setCompacDisc(@Qualifier CompacDisc cd) {
         this.compacDisc = cd;
     }
 }

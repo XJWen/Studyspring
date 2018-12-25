@@ -1,4 +1,4 @@
-package springtrip.ch3.restfun;
+package springtrip.ch3.condition;
 
 import org.springframework.context.annotation.Condition;
 import org.springframework.context.annotation.ConditionContext;
