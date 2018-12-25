@@ -1,6 +1,7 @@
 package springtrip.ch3;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
@@ -13,6 +14,7 @@ import javax.sql.DataSource;
  * Profile 注解在方法体上
  * **/
 @Configuration
+@ComponentScan
 public class DataSourceConfig {
 
     @Bean
