@@ -18,11 +18,12 @@ public class BlankDisc implements CompacDisc{
     private String title;
     private String artist;
     private List<String> tracks;
-
     @Bean
     public static PropertySourcesPlaceholderConfigurer placeholderConfigurer(){
         return new PropertySourcesPlaceholderConfigurer();
     }
+
+    public BlankDisc(){}
 
     public BlankDisc(String title,String artist,List<String> tracks){
         this.title = title;
@@ -41,10 +42,14 @@ public class BlankDisc implements CompacDisc{
     public void play() {
         System.out.println("playing"+title+" by"+artist);
         for (String track : tracks){
-            System.out.println("-track:"+track);
+            playTrack(track);
         }
     }
 
+    @Override
+    public void playTrack(String track){
+        System.out.println("-track:"+track);
+    }
 
     public void setTitle(String title) {
         this.title = title;

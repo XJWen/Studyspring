@@ -22,7 +22,7 @@
         <value>Getting Better</value>
     </util:list>
 
-    <bean  class="springtrip.ch1.soundsystem.SgtPaggers"></bean>
+    <bean id="sgtPaggers"  class="springtrip.ch1.soundsystem.SgtPaggers"></bean>
     <!--
     c命名空间的使用,-ref是指构造方法的参数，_0指的是该bean的第一个属性
     这个设置tiele和artlist是硬编码在配置类中的，不推荐
@@ -36,6 +36,8 @@
                 <value>With a Little Help form My friends</value>
                 <value>Lucy in the Sky with Diamods</value>
                 <value>Getting Better</value>
+                <value>Fixing a Hole</value>
+                <value>Bye Bye Bye</value>
             </list>
         </constructor-arg>
     </bean>

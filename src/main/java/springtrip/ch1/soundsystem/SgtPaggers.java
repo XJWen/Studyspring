@@ -5,8 +5,9 @@ import org.springframework.stereotype.Component;
 
 /**
  * 标准组件类,Sgt. Pegger的唱片
+ * 可在Component中设置Bean的id
  * **/
-@Component("setPaggers")
+@Component()
 public class SgtPaggers implements CompacDisc{
     private String title = "Sgt. Pegger's Lonely Hearts Club Band";
     private String artist = "The Beatles";
@@ -16,6 +17,11 @@ public class SgtPaggers implements CompacDisc{
     @Override
     public void play() {
         System.out.println("Playing"+title+" on"+artist);
+    }
+
+    @Override
+    public void playTrack(String trackName) {
+
     }
 
     @Bean

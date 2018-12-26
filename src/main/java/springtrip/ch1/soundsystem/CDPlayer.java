@@ -25,6 +25,10 @@ public class CDPlayer   implements CompacDisc {
 
     }
 
+    @Override
+    public void playTrack(String track){
+
+    }
     /**
      * Autowired注入setter方法中
      * **/
