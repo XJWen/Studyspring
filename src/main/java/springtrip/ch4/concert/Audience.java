@@ -25,20 +25,20 @@ public class Audience {
     /**
      * 连接点方法执行之前执行该切面方法
      * **/
-   /* @Before("perform()")
+//    @Before("perform()")
     public void silenceCellPhones(){
        System.out.println("演出前观众手机静音。");
-    }*/
+    }
 
-    /*@Before("perform()")
+//    @Before("perform()")
     public void takeSeats(){
         System.out.println("演出前观众入席。");
-    }*/
+    }
 
     /**
      * 连接点方法返回参数之后执行该切面方法
      * **/
-    /*@AfterReturning("perform()")
+/*    @AfterReturning("perform()")
     public void applause(){
         System.out.println("演出成功后观众鼓掌喝彩。");
     }*/

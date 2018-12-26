@@ -14,4 +14,14 @@
     <!--启用ApsectJ自动代理-->
     <aop:aspectj-autoproxy/>
     <bean class="springtrip.ch4.concert.Audience"/>
+    <bean class="springtrip.ch4.concert.Mayday"/>
+
+    <!--一个切面的定义-->
+    <aop:config>
+        <aop:aspect ref="audience">
+            <aop:pointcut id="show" expression="execution(* springtrip.ch4.concert.Performance.perform(..))"/>
+            <aop:before method="silenceCellPhones" pointcut="execution(* springtrip.ch4.concert.Performance.perform(..))"/>
+            <aop:before method="takeSeats" pointcut-ref="show"/>
+        </aop:aspect>
+    </aop:config>
 </beans>
