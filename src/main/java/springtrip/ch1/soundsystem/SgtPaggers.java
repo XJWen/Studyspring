@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 /**
  * 标准组件类,Sgt. Pegger的唱片
  * **/
-@Component
+@Component("setPaggers")
 public class SgtPaggers implements CompacDisc{
     private String title = "Sgt. Pegger's Lonely Hearts Club Band";
     private String artist = "The Beatles";

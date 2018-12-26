@@ -22,13 +22,13 @@
         <value>Getting Better</value>
     </util:list>
 
-    <bean id="sgtPaggers" class="springtrip.ch1.soundsystem.SgtPaggers"></bean>
+    <bean  class="springtrip.ch1.soundsystem.SgtPaggers"></bean>
     <!--
     c命名空间的使用,-ref是指构造方法的参数，_0指的是该bean的第一个属性
     这个设置tiele和artlist是硬编码在配置类中的，不推荐
     -->
     <bean id="blankDisc" class="springtrip.ch1.soundsystem.BlankDisc"
-          c:title="${dics.title}" c:artist="${dics.artist}"
+          c:title="${disc.title}" c:artist="${disc.artist}"
             p:title="Sgt. Pegger's Lonely Hearts Club band" p:artist="the beatles" p:tracks-ref="trackList">
         <constructor-arg name="tracks">
             <list>
