@@ -10,7 +10,7 @@ public aspect CriticAspect {
 
     pointcut perform() : execution(* springtrip.ch4.concert.Performance.perform(..));
 
-    after():perform(){
+    after()returning():perform(){
         System.out.println(engine.getCriticism());
     }
 
