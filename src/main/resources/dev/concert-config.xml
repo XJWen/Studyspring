@@ -27,7 +27,9 @@
     </bean>
     <!--factory-method="aspectOf" 与 property name="engine"不兼容-->
     <bean class="springtrip.ch4.concert.CriticAspect" factory-method="aspectOf">
-        <!--<property name="engine" ref="criticismEngine"/>-->
+<!--
+        <property name="engine" ref="criticismEngine"/>
+-->
     </bean>
 
     <!--一个切面的定义-->
